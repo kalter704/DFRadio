@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">DF Radio</string>
+
+    <string name="tab_all">Все</string>
+    <string name="tab_favorite">Любимое</string>
+
+    <string name="toolbar_title">DANCE FAMILY</string>
+    <string name="toolbar_subtitle">RADIO</string>
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    /*
+    String for menu activity
+    */
+    <string name="menu_title">МЕНЮ</string>
+    <string name="menu_shate">Поделиться с друзьями</string>
+    <string name="menu_info">О Dance Family</string>
+    <string name="menu_star">Оценить радио</string>
+    <string name="menu_money">Помочь проекту</string>
+    <string name="menu_email">Написать разработчикам</string>
+
+    <string name="text_description_action">Поделиться</string>
+    <string name="text_for_share">
+        Включай быстрее Dance Family radio, ждем только тебя!\n
+        http://yandex.ru
+    </string>
+
+    <string name="link_to_app_in_google_play">market://details?id=com.baviux.voicechanger</string>
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    /*
+    String for play activity
+    */
+    <string name="play_title">CRAZY DREAM</string>
+    <string name="play_subtitle">CHANNEL</string>
+
+    <string name="text_ready_to_play">Включай быстрее!</string>
+    <string name="text_connection">Подключение...</string>
+    <string name="text_play">Crazy Dream</string>
+    <string name="subtext_ready_to_play">Мы уже в эфире!</string>
+    <string name="subtext_connection">Сейчас все будет :)</string>
+    <string name="subtext_play">Мы уже в эфире!</string>
+
+    <string name="link_vk">https://vk.com/id5596909</string>
+    <string name="link_youtube">https://www.youtube.com/</string>
+    <string name="link_instagram">https://www.instagram.com/</string>
+
+    <string name="snack_like">Радио добавлено в любимое</string>
+    <string name="snack_unlike">Радио удалено из любимое</string>
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    <string name="file_name">likes_file</string>
+
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+    <string name="donate_activity_title">ПОМОЩЬ ПРОЕКТУ</string>
+    <string name="donate_text">
+        Яндекс деньги 1234567890\nСбербанк онлайн 1234567890\nWebmoney 1234567890\n
+    </string>
+
+    <string name="contacts_title">КОНТАКТЫ</string>
+    <string name="contacts_text_item">Алексей Комаров:</string>
+    <string name="contacts_text_link"> https://vk.com/id24969366</string>
+
+    <string name="about_activity_title">О DANCE FAMILY</string>
+
+    <string name="very_big_text">
+        Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет
+        выполнять важные задания по разработке новых предложений. Идейные соображения высшего порядка, а
+        также сложившаяся структура организации представляет собой интересный эксперимент проверки соответствующий
+        условий активизации. Равным образом консультация с широким активом позволяет выполнять важные задания
+        по разработке направлений прогрессивного развития. Идейные соображения высшего порядка, а также новая
+        модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании
+        позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка,
+        а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание
+        соответствующий условий активизации. Не следует, однако забывать, что рамки и место обучения кадров влечет
+        за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+        Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание
+        дальнейших направлений развития. Задача организации, в особенности же постоянный количественный рост
+        и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании системы
+        обучения кадров, соответствует насущным потребностям. С другой стороны консультация с широким активом
+        позволяет выполнять важные задания по разработке направлений прогрессивного развития.
+        Не следует, однако забывать, что новая модель организационной деятельности требуют от нас анализа
+        направлений прогрессивного развития. Повседневная практика показывает, что рамки и место обучения кадров
+        позволяет оценить значение существенных финансовых и административных условий. Идейные соображения высшего
+        порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение системы
+        обучения кадров, соответствует насущным потребностям.
+    </string>
+
+
+    <string name="error_network">Нет соединения с Интернетом!</string>
+
+</resources>
