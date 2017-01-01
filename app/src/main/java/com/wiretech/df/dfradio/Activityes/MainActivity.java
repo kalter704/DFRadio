@@ -64,13 +64,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
+        AdControl.getInstance().intoActivity();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AdControl.getInstance().outOfActivity();
     }
 
     @Override

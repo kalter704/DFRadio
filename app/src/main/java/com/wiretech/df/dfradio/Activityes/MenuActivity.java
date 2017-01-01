@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.wiretech.df.dfradio.Activityes.InfoActivityes.AboutDFActivity;
 import com.wiretech.df.dfradio.Activityes.InfoActivityes.DevWriteActivity;
 import com.wiretech.df.dfradio.Activityes.InfoActivityes.DonateActivity;
+import com.wiretech.df.dfradio.Classes.AdControl;
 import com.wiretech.df.dfradio.R;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
@@ -89,5 +90,17 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         if(DEBUG_MENU_ACTIVITY) {
             Toast.makeText(MenuActivity.this, str, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdControl.getInstance().intoActivity();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AdControl.getInstance().outOfActivity();
     }
 }

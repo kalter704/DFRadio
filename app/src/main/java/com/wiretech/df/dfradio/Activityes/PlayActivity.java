@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.wiretech.df.dfradio.Classes.AdControl;
 import com.wiretech.df.dfradio.Classes.Player;
 import com.wiretech.df.dfradio.Classes.RadioState;
 import com.wiretech.df.dfradio.DataClasses.Const;
@@ -270,6 +271,13 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             showPlay();
         }
+        AdControl.getInstance().intoActivity();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AdControl.getInstance().outOfActivity();
     }
 
     @Override

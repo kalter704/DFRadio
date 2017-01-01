@@ -19,6 +19,8 @@ public class AdControl {
 
     private boolean isShowAd = false;
 
+    private boolean isInApp = false;
+
     private int mCurrentAd = 0;
 
     private int mSecondsForSplashActivity = 30; // 60 = 1 minute,  replace to 600 = 10 minute
@@ -84,10 +86,7 @@ public class AdControl {
 
             @Override
             public void onAdLoaded() {
-                if (mInterstAdList.get(mCurrentAd).isLoaded()) {
-                    mInterstAdList.get(mCurrentAd).show();
-                }
-                mCurrentAd++;
+                showAd();
                 Log.d("IntersAds", "onAdLoaded");
             }
         };
@@ -102,24 +101,22 @@ public class AdControl {
     }
 
     public void startNewAd() {
-        if (isShowAd) {
-            if (mInterstAdList.size() > 0) {
-                new Thread() {
-                    public void run() {
-                        try {
-                            int splashTimer = 0;
-                            while (splashTimer < (mSecondsForSplashActivity * 1000)) {
-                                sleep(mIterationTime);
-                                splashTimer += mIterationTime;
-                            }
-                            request();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        } finally {
+        if (isShowAd && (mInterstAdList.size() > 0)) {
+            new Thread() {
+                public void run() {
+                    try {
+                        int splashTimer = 0;
+                        while (splashTimer < (mSecondsForSplashActivity * 1000)) {
+                            sleep(mIterationTime);
+                            splashTimer += mIterationTime;
                         }
+                        request();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
                     }
-                }.start();
-            }
+                }
+            }.start();
         }
     }
 
@@ -161,4 +158,22 @@ public class AdControl {
         message.sendToTarget();
     }
 
+    private void showAd() {
+        if (mCurrentAd >= mInterstAdList.size()) {
+            return;
+        }
+        if (isInApp && mInterstAdList.get(mCurrentAd).isLoaded()) {
+            mInterstAdList.get(mCurrentAd).show();
+            mCurrentAd++;
+        }
+    }
+
+    public void intoActivity() {
+        isInApp = true;
+        showAd();
+    }
+
+    public void outOfActivity() {
+        isInApp = false;
+    }
 }
