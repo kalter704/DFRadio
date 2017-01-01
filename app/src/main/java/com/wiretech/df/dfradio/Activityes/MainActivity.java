@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.wiretech.df.dfradio.Classes.AdControl;
+import com.wiretech.df.dfradio.Classes.Player;
 import com.wiretech.df.dfradio.Classes.RadioState;
 import com.wiretech.df.dfradio.DataClasses.Const;
 import com.wiretech.df.dfradio.DataClasses.RadioChannels;
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+        Player.offRadio();
+        AdControl.getInstance().disableAds();
     }
 
 

@@ -158,6 +158,8 @@ public class FavoriteRadioFragment extends Fragment implements OnRadioListener {
                                 Snackbar.LENGTH_SHORT);
                         View snackView = snackbar.getView();
                         snackView.setBackgroundColor(getActivity().getResources().getColor(R.color.snackErrorNetworkColor));
+                        TextView snackTV = (TextView) snackView.findViewById(android.support.design.R.id.snackbar_text);
+                        snackTV.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                         snackbar.show();
                     }
                 }

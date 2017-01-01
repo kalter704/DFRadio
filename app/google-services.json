@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "381119147119",
+    "firebase_url": "https://dfradio-cb547.firebaseio.com",
+    "project_id": "dfradio-cb547",
+    "storage_bucket": "dfradio-cb547.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381119147119:android:60d39957eeb0f2f3",
+        "android_client_info": {
+          "package_name": "com.wiretech.df.dfradio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381119147119-lmgamqpqp48u4k1lmmj40qr184v55bts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wiretech.df.dfradio",
+            "certificate_hash": "E6737334664019B26A70A4EA8785145821E495FC"
+          }
+        },
+        {
+          "client_id": "381119147119-m98odu4hkvgv95sl5049i8ub88fhh4gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_NkmhnVahpNTVDHMdpkmljmkgVrBg90Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381119147119-m98odu4hkvgv95sl5049i8ub88fhh4gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

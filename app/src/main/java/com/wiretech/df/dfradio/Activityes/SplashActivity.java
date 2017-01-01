@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.wiretech.df.dfradio.Classes.AdControl;
+import com.wiretech.df.dfradio.Classes.Player;
 import com.wiretech.df.dfradio.Classes.RadioState;
 import com.wiretech.df.dfradio.DataClasses.RadioChannels;
 import com.wiretech.df.dfradio.R;
@@ -17,6 +21,13 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        //Player.newPlayerInstatnce();
+
+
+        AdControl.newAdcontrolInstance();
+        AdControl.getInstance().setContext(this);
+        AdControl.getInstance().enableAds();
 
         RadioState.context = this;
 

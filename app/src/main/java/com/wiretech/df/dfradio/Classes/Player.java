@@ -52,6 +52,10 @@ public class Player implements PlayerCallback {
 
     private Player() {}
 
+    public static void newPlayerInstatnce() {
+        instance = new Player();
+    }
+
     public static void start(Context context, String URL) {
         instance.mUrl = URL;
         instance.context = context;
@@ -63,11 +67,12 @@ public class Player implements PlayerCallback {
             if (instance.checkSuffix(URL)) {
                 instance.decodeStremLink(URL);
             } else {
+                //Log.d("PlayerTag", "");
                 instance.mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
                 int result = instance.mAudioManager.requestAudioFocus(instance.afChangeListener,
                         AudioManager.STREAM_MUSIC,
                         AudioManager.AUDIOFOCUS_GAIN);
-
+                Log.d("PlayerTag", "result = " + String.valueOf(result));
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                     instance.getPlayer().playAsync(URL);
                 } else {
@@ -79,6 +84,12 @@ public class Player implements PlayerCallback {
 
     public static void stop() {
         instance.getPlayer().stop();
+        //instance.getPlayer().;
+    }
+
+    public static void offRadio() {
+        mIsReady = true;
+        instance.mAudioManager.abandonAudioFocus(instance.afChangeListener);
     }
 
     private boolean checkSuffix(String streamUrl) {
@@ -211,13 +222,15 @@ public class Player implements PlayerCallback {
                 Log.d("PlayerTag", "AudioFocusChange AUDIOFOCUS_GAIN");
             } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                 //manager.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
-                Intent pauseIntent = new Intent(context, NotificationService.class);
-                pauseIntent.setAction(Const.ACTION.PLAY_ACTION);
-                PendingIntent ppauseIntent = PendingIntent.getService(context, 0, pauseIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-                try {
-                    ppauseIntent.send();
-                } catch (PendingIntent.CanceledException e) {
-                    e.printStackTrace();
+                if (RadioState.state == RadioState.State.PLAY) {
+                    Intent pauseIntent = new Intent(context, NotificationService.class);
+                    pauseIntent.setAction(Const.ACTION.PLAY_ACTION);
+                    PendingIntent ppauseIntent = PendingIntent.getService(context, 0, pauseIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                    try {
+                        ppauseIntent.send();
+                    } catch (PendingIntent.CanceledException e) {
+                        e.printStackTrace();
+                    }
                 }
                 mAudioManager.abandonAudioFocus(afChangeListener);
                 Log.d("PlayerTag", "AudioFocusChange AUDIOFOCUS_LOSS");
