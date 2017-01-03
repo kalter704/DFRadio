@@ -25,15 +25,6 @@ public class RadioChannels {
     private RadioChannels() {
     }
 
-/*
-    public int mIds[] = {
-            0,
-            1,
-            2,
-            3
-    };
-    */
-
     public List<Integer> mIds = new ArrayList<Integer>() {{
         add(0);
         add(1);
