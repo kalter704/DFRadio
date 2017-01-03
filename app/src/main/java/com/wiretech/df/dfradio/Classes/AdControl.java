@@ -37,7 +37,7 @@ public class AdControl {
         return instance;
     }
 
-    public static void newAdcontrolInstance() {
+    public static void newAdControlInstance() {
         instance = new AdControl();
     }
 
@@ -137,10 +137,11 @@ public class AdControl {
         if (mCurrentAd >= mInterstAdList.size()) {
             mCurrentAd = 0;
         }
+        Log.d("IntersAds", "interstitial_ad_unit_id = " + mInterstAdList.get(mCurrentAd).getAdUnitId());
         Log.d("IntersAds", "request, mCurrentAd = " + String.valueOf(mCurrentAd));
         Log.d("IntersAds", "request, mAdList.size() = " + String.valueOf(mInterstAdList.size()));
         //requestNewInterstitial();
-               /*
+        /*
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();

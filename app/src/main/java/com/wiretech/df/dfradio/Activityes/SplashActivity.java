@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         //Player.newPlayerInstatnce();
 
 
-        AdControl.newAdcontrolInstance();
+        AdControl.newAdControlInstance();
         AdControl.getInstance().setContext(this);
         AdControl.getInstance().enableAds();
 

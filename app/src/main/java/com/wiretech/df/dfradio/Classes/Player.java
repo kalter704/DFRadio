@@ -52,9 +52,11 @@ public class Player implements PlayerCallback {
 
     private Player() {}
 
+    /*
     public static void newPlayerInstatnce() {
         instance = new Player();
     }
+    */
 
     public static void start(Context context, String URL) {
         instance.mUrl = URL;
@@ -89,7 +91,7 @@ public class Player implements PlayerCallback {
 
     public static void offRadio() {
         mIsReady = true;
-        instance.mAudioManager.abandonAudioFocus(instance.afChangeListener);
+        //instance.mAudioManager.abandonAudioFocus(instance.afChangeListener);
     }
 
     private boolean checkSuffix(String streamUrl) {
