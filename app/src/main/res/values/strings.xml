@@ -97,11 +97,13 @@
     <string name="banner_ad_unit_id">ca-app-pub-6263456605318646/4417256811</string>
 
     <string-array name="interstitial_ad_unit_id_array">
-        <item>ca-app-pub-6263456605318646/4857908817</item>
-        <item>ca-app-pub-6263456605318646/1969991211</item>
-        <item>ca-app-pub-6263456605318646/3446724415</item>
-        <item>ca-app-pub-6263456605318646/5101267611</item>
-        <item>ca-app-pub-6263456605318646/6438400019</item>
+        <item>ca-app-pub-6263456605318646/1473902816</item>
+        <item>ca-app-pub-6263456605318646/2950636012</item>
+        <item>ca-app-pub-6263456605318646/4427369213</item>
+        <item>ca-app-pub-6263456605318646/5904102418</item>
+        <item>ca-app-pub-6263456605318646/7380835610</item>
+        <item>ca-app-pub-6263456605318646/8857568812</item>
+        <item>ca-app-pub-6263456605318646/1334302012</item>
     </string-array>
     
 </resources>
