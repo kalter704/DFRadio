@@ -94,7 +94,20 @@
     <string name="error_network">Нет соединения с Интернетом!</string>
 
     <string name="admob_app_id">ca-app-pub-6263456605318646~8987057210</string>
-    <string name="banner_ad_unit_id">ca-app-pub-6263456605318646/4417256811</string>
+    <!-- <string name="banner_ad_unit_id">ca-app-pub-6263456605318646/4417256811</string> -->
+
+
+    <!--
+    <string-array name="interstitial_ad_unit_id_array">
+        <item>ca-app-pub-6263456605318646/1473902816</item>
+        <item>ca-app-pub-6263456605318646/1969991211</item>
+        <item>ca-app-pub-6263456605318646/3446724415</item>
+        <item>ca-app-pub-6263456605318646/5101267611</item>
+        <item>ca-app-pub-6263456605318646/6438400019</item>
+        <item>ca-app-pub-6263456605318646/8857568812</item>
+        <item>ca-app-pub-6263456605318646/1334302012</item>
+    </string-array>
+    -->
 
     <string-array name="interstitial_ad_unit_id_array">
         <item>ca-app-pub-6263456605318646/1473902816</item>
